@@ -1,12 +1,33 @@
-extends layout
+extends mainLayout
 
 block content
   main
-    section#status RIFA YAKULT 2022!
-    section#Slots
-      #slot1.a1
-      #slot2.a1
-      #slot3.a1
-      #slot4.a1
-    section#Gira(onclick='doSlot(2525)') VER MI BOLETO!
+    .container-contact100
+      .wrap-contact100
+        form.contact100-form.validate-form
+          span.contact100-form-title
+            | Rifa Yakult 2022!
+          .wrap-input100.validate-input(data-validate='Name is required')
+            span.label-input100 Nombre
+            input.input100(type='text' name='name' placeholder='Ingresa tu nombre')
+            span.focus-input100
+          .wrap-input100.validate-input(data-validate='Valid email is required: ex@abc.xyz')
+            span.label-input100 Correo electrónico
+            input.input100(type='text' name='email' placeholder='Ingresa tu correo electrónico')
+            span.focus-input100
+          .wrap-input100.validate-input(data-validate='Message is required')
+            span.label-input100 Teléfono Móvil
+            input.input100(type='text' name='email' placeholder='Ingresa tu número de celular')
+            span.focus-input100
+          .wrap-input100.validate-input(data-validate='Valid email is required: ex@abc.xyz')
+            span.label-input100 Código Personal
+            input.input100(type='text' name='email' placeholder='Ingresa tú código personal')
+            span.focus-input100
+          .container-contact100-form-btn
+            .wrap-contact100-form-btn
+              .contact100-form-bgbtn
+              button.contact100-form-btn
+                span
+                  | Ver mi boleto
+                  i.fa.fa-long-arrow-right.m-l-7(aria-hidden='true')
 
