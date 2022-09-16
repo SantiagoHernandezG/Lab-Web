@@ -1,7 +1,7 @@
 /**
  * –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
  * # Proyecto
- * Módulo | `machine.js`
+ * Controlador | `home.js`
  *
  * A01657103 | Daniel Bakas Amuchástegui
  * A01027543 | Santiago Hernández Guerrero
@@ -11,14 +11,7 @@
  */
 
 //* Main
-const machine = (_, res) => {
-    res.render('machine', {
-        title: 'Conoce tu Boleto',
-        code: '3476'
-    });
-    // TODO: Send as a view parameter the result of the spin
-    // TODO: Send the code in the router manager, so the view already knows which code the machine will produce
-};
+const home = (_, res) => res.send({ title: "Rifa Yakult" });
 
 //* Exports
-export { machine };
+export { home };

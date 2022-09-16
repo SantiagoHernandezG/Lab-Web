@@ -1,7 +1,7 @@
 //-
  * –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
  * # Proyecto
- * Módulo | `machine.pug`
+ * Vista | `error.pug`
  *
  * A01657103 | Daniel Bakas Amuchástegui
  * A01027543 | Santiago Hernández Guerrero
@@ -12,11 +12,6 @@
 extends layout
 
 block content
-    main
-        section#status RIFA YAKULT 2022!
-        section#Slots
-            #slot1.a1
-            #slot2.a1
-            #slot3.a1
-            #slot4.a1
-        section#Gira(onclick=`doSlot(${code})`) VER MI BOLETO!
+    h1=message
+    h2=error.status
+    pre #{error.stack}

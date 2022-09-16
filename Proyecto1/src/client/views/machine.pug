@@ -1,20 +1,22 @@
-/**
+//-
  * –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
  * # Proyecto
- * Módulo | `home.js`
+ * Vista | `machine.pug`
  *
  * A01657103 | Daniel Bakas Amuchástegui
  * A01027543 | Santiago Hernández Guerrero
  *
  * Sep 14, 2022
  * –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
- */
 
-//* Main
-const dashboard = (_, res) => {
-    res.render('dashboard', {title: 'Admin Dashboard'});
-    // Send as a view parameter the result of the spin
-};
+extends layout
 
-//* Exports
-export {dashboard};
+block content
+    main
+        section#status RIFA YAKULT 2022!
+        section#Slots
+            #slot1.a1
+            #slot2.a1
+            #slot3.a1
+            #slot4.a1
+        section#Gira(onclick=`doSlot(${code})`) VER MI BOLETO!

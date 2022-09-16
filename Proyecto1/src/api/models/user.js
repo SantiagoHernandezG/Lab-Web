@@ -1,7 +1,7 @@
 /**
  * –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
  * # Proyecto
- * Módulo | `users.js`
+ * Modelo | `user.js`
  *
  * A01657103 | Daniel Bakas Amuchástegui
  * A01027543 | Santiago Hernández Guerrero
@@ -10,8 +10,15 @@
  * –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
  */
 
+//* Imports
+import { model, Schema } from "mongoose";
+
 //* Main
-const users = (_, res) => res.send('respond with a resource');
+const schema = new Schema({
+    name: { type: String, required: true }
+});
+
+const User = model("User", schema);
 
 //* Exports
-export { users };
+export { User };

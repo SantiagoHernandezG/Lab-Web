@@ -1,7 +1,7 @@
 /**
  * –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
  * # Proyecto
- * Módulo | `dashboard.js`
+ * Rutas | `index.js`
  *
  * A01657103 | Daniel Bakas Amuchástegui
  * A01027543 | Santiago Hernández Guerrero
@@ -12,15 +12,19 @@
 
 //* Imports
 // Package Imports
-import {Router} from 'express';
+import { Router } from "express";
 // Project Imports
-import {dashboard} from "../controllers/dashboard.js";
+import { home } from "./controllers/home.js";
+import { machine } from "./controllers/machine.js";
+import { dashboard } from "./controllers/dashboard.js";
 
 //* Main
 // Router
 const router = Router();
 // Routes
-router.get('/', dashboard);
+router.get("/dashboard", dashboard);
+router.get("/machine", machine);
+router.get("/", home);
 
 //* Exports
-export {router};
+export { router };

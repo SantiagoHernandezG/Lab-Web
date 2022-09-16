@@ -1,20 +1,30 @@
-//-
+/**
  * –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
  * # Proyecto
- * Módulo | `mainLayout.pug`
+ * Rutas | `users.js`
  *
  * A01657103 | Daniel Bakas Amuchástegui
  * A01027543 | Santiago Hernández Guerrero
  *
  * Sep 14, 2022
  * –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+ */
 
-doctype html
-html
-    head
-        link(rel='stylesheet' type='text/css' href='/stylesheets/bootstrap.min.css')
-        link(rel='stylesheet' type='text/css' href='/fonts/font-awesome-4.7.0/css/font-awesome.min.css')
-        link(rel='stylesheet' type='text/css' href='/stylesheets/main.css')
-        script(src='/scripts/slotMachine.js')
-    body
-        block content
+//* Imports
+// Package Imports
+import { Router } from "express";
+// Project Imports
+import { del, get, getAll, post, put } from "../controllers/users.js";
+
+//* Main
+// Router
+const router = Router();
+// Routes
+router.get("/", getAll);
+router.post("/", post);
+router.delete("/:id", del);
+router.get("/:id", get);
+router.put("/:id", put);
+
+//* Exports
+export { router };

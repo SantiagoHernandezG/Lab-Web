@@ -1,7 +1,7 @@
 /**
  * –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
  * # Proyecto
- * Módulo | `home.js`
+ * Controlador | `machine.js`
  *
  * A01657103 | Daniel Bakas Amuchástegui
  * A01027543 | Santiago Hernández Guerrero
@@ -10,17 +10,13 @@
  * –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
  */
 
-//* Imports
-// Package Imports
-import {Router} from 'express';
-// Project Imports
-import {home} from "../controllers/home.js";
-
 //* Main
-// Router
-const router = Router();
-// Routes
-router.get('/', home);
+const machine = (_, res) => {
+    res.send({
+        title: "Conoce tu Boleto",
+        code: "3476"
+    });
+};
 
 //* Exports
-export {router};
+export { machine };

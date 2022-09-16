@@ -1,7 +1,7 @@
 /**
  * –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
  * # Proyecto
- * Módulo | `machine.js`
+ * Controlador | `dashboard.js`
  *
  * A01657103 | Daniel Bakas Amuchástegui
  * A01027543 | Santiago Hernández Guerrero
@@ -10,17 +10,11 @@
  * –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
  */
 
-//* Imports
-// Package Imports
-import {Router} from 'express';
-// Project Imports
-import {machine} from "../controllers/machine.js";
-
 //* Main
-// Router
-const router = Router();
-// Routes
-router.get('/', machine);
+const dashboard = (_, res) => {
+    res.render("dashboard", { title: "Admin Dashboard" });
+    // Send as a view parameter the result of the spin
+};
 
 //* Exports
-export {router};
+export { dashboard };

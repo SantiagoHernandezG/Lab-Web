@@ -1,7 +1,7 @@
 /**
  * –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
  * # Proyecto
- * Módulo | `home.js`
+ * Controlador | `home.js`
  *
  * A01657103 | Daniel Bakas Amuchástegui
  * A01027543 | Santiago Hernández Guerrero
@@ -10,11 +10,17 @@
  * –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
  */
 
+//* Imports
+import app from "../../app.js";
+
 //* Main
-const home = (_, res) => {
-    res.render('index', {title: 'Rifa Yakult'});
-    // Send as a view parameter the result of the spin
+const home = async (_, res) => {
+    const endpoint = app.get("api");
+    const url = new URL(endpoint);
+    const data = await fetch(url);
+    const json = await data.json();
+    res.render("index", json);
 };
 
 //* Exports
-export {home};
+export { home };
