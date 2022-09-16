@@ -1,10 +1,26 @@
-var express = require('express');
-var router = express.Router();
+/**
+ * –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+ * # Proyecto
+ * Módulo | `dashboard.js`
+ *
+ * A01657103 | Daniel Bakas Amuchástegui
+ * A01027543 | Santiago Hernández Guerrero
+ *
+ * Sep 14, 2022
+ * –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+ */
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('dashboard', { title: 'Admin Dashboard' }); 
-  // Send as a view parameter the result of the spin
-});
+//* Imports
+// Package Imports
+import {Router} from 'express';
+// Project Imports
+import {dashboard} from "../controllers/dashboard.js";
 
-module.exports = router;
+//* Main
+// Router
+const router = Router();
+// Routes
+router.get('/', dashboard);
+
+//* Exports
+export {router};

@@ -1,7 +1,7 @@
 /**
  * –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
  * # Proyecto
- * Módulo | `error.pug`
+ * Módulo | `machine.js`
  *
  * A01657103 | Daniel Bakas Amuchástegui
  * A01027543 | Santiago Hernández Guerrero
@@ -10,23 +10,15 @@
  * –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
  */
 
-//* Imports
-// Package Imports
-import {Router} from 'express';
-// Project Imports
-import {router as dashboard} from "./dashboard.js";
-import {router as home} from "./home.js";
-import {router as machine} from "./machine.js";
-import {router as users} from "./users.js";
-
 //* Main
-// Router
-const router = Router();
-// Routes
-router.use('/', home);
-router.use('/dashboard', dashboard);
-router.use('/machine', machine);
-router.use('/users', users);
+const machine = (_, res) => {
+    res.render('machine', {
+        title: 'Conoce tu Boleto',
+        code: '3476'
+    });
+    // TODO: Send as a view parameter the result of the spin
+    // TODO: Send the code in the router manager, so the view already knows which code the machine will produce
+};
 
 //* Exports
-export {router};
+export { machine };

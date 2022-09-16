@@ -1,9 +1,24 @@
-var express = require('express');
-var router = express.Router();
+/**
+ * –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+ * # Proyecto
+ * Módulo | `users.js`
+ *
+ * A01657103 | Daniel Bakas Amuchástegui
+ * A01027543 | Santiago Hernández Guerrero
+ *
+ * Sep 14, 2022
+ * –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+ */
 
-/* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
-});
+//* Imports
+// Package Imports
+import {Router} from 'express';
+// Project Imports
+import {users} from "../controllers/users.js";
 
-module.exports = router;
+//* Main
+const router = Router();
+router.get('/', users);
+
+//* Exports
+export {router};

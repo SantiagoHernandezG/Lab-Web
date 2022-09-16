@@ -1,7 +1,7 @@
 /**
  * –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
  * # Proyecto
- * Módulo | `error.pug`
+ * Módulo | `home.js`
  *
  * A01657103 | Daniel Bakas Amuchástegui
  * A01027543 | Santiago Hernández Guerrero
@@ -14,19 +14,13 @@
 // Package Imports
 import {Router} from 'express';
 // Project Imports
-import {router as dashboard} from "./dashboard.js";
-import {router as home} from "./home.js";
-import {router as machine} from "./machine.js";
-import {router as users} from "./users.js";
+import {home} from "../controllers/home.js";
 
 //* Main
 // Router
 const router = Router();
 // Routes
-router.use('/', home);
-router.use('/dashboard', dashboard);
-router.use('/machine', machine);
-router.use('/users', users);
+router.get('/', home);
 
 //* Exports
 export {router};

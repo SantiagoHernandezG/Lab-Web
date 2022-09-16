@@ -1,11 +1,26 @@
-var express = require('express');
-var router = express.Router();
+/**
+ * –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+ * # Proyecto
+ * Módulo | `machine.js`
+ *
+ * A01657103 | Daniel Bakas Amuchástegui
+ * A01027543 | Santiago Hernández Guerrero
+ *
+ * Sep 14, 2022
+ * –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+ */
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('machine', { title: 'Conoce tu Boleto', code: '3476' }); 
-  // Send as a view parameter the result of the spin
-  // Send the code in the router manager, so the view already knows which code the machine will produce
-});
+//* Imports
+// Package Imports
+import {Router} from 'express';
+// Project Imports
+import {machine} from "../controllers/machine.js";
 
-module.exports = router;
+//* Main
+// Router
+const router = Router();
+// Routes
+router.get('/', machine);
+
+//* Exports
+export {router};
