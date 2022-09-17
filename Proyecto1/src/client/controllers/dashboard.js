@@ -10,10 +10,16 @@
  * –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
  */
 
+//* Imports
+import app from "../../app.js";
+
 //* Main
-const dashboard = (_, res) => {
-    res.render("dashboard", { title: "Admin Dashboard" });
-    // Send as a view parameter the result of the spin
+const dashboard = async (_, res) => {
+    const endpoint = app.get("api");
+    const url = new URL(endpoint);
+    const data = await fetch(url);
+    const json = await data.json();
+    res.render("index", json);
 };
 
 //* Exports

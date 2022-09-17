@@ -1,5 +1,8 @@
-### /
+### / | GET
 GET http://localhost/ HTTP/1.1
 
-### /machine
+### /dashboard | GET
+GET http://localhost/dashboard HTTP/1.1
+
+### /machine | GET
 GET http://localhost/machine HTTP/1.1

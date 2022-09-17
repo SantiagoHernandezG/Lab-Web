@@ -44,7 +44,8 @@ const post = async (req, res) => {
 // PUT | One
 const put = async (req, res) => {
     const { id } = req.params;
-    const data = await User.updateOne({ _id: id }, { $set: req.body });
+    const [filter, update] = [{ _id: id }, { $set: req.body }];
+    const data = await User.updateOne(filter, update);
     res.send(data);
 };
 

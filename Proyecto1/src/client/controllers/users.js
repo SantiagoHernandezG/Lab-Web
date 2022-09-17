@@ -1,7 +1,7 @@
 /**
  * –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
  * # Proyecto
- * Controlador | `home.js`
+ * Controlador | `users.js`
  *
  * A01657103 | Daniel Bakas Amuchástegui
  * A01027543 | Santiago Hernández Guerrero
@@ -10,9 +10,18 @@
  * –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
  */
 
+//* Imports
+import app from "../../app.js";
+
 //* Main
-const data = { title: "Rifa Yakult" };
-const home = (_, res) => res.send(data);
+// GET | All
+const users = async (_, res) => {
+    const endpoint = app.get("api");
+    const url = new URL("users", endpoint);
+    const data = await fetch(url);
+    const json = await data.json();
+    res.send(json);
+};
 
 //* Exports
-export { home };
+export { users };

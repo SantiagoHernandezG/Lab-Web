@@ -17,14 +17,16 @@ import { Router } from "express";
 import { home } from "./controllers/home.js";
 import { machine } from "./controllers/machine.js";
 import { dashboard } from "./controllers/dashboard.js";
+import { users } from "./controllers/users.js";
 
 //* Main
 // Router
 const router = Router();
 // Routes
+router.get("/", home);
 router.get("/dashboard", dashboard);
 router.get("/machine", machine);
-router.get("/", home);
+router.get("/users", users);
 
 //* Exports
 export { router };

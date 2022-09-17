@@ -1,18 +1,18 @@
 /**
  * –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
  * # Proyecto
- * Controlador | `home.js`
+ * Controlador | `dashboard.js`
  *
  * A01657103 | Daniel Bakas Amuchástegui
  * A01027543 | Santiago Hernández Guerrero
  *
- * Sep 14, 2022
+ * Sep 17, 2022
  * –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
  */
 
 //* Main
-const data = { title: "Rifa Yakult" };
-const home = (_, res) => res.send(data);
+const data = { title: "Admin Dashboard" };
+const dashboard = async (_, res) => res.send(data);
 
 //* Exports
-export { home };
+export { dashboard };
