@@ -23,12 +23,11 @@ const getAll = async (_, res) => {
 // GET | One
 const exists = async (req, res) => {
     const { id } = req.params;
-    const data = await User.find({ code: id });
-    const { _id, names, ticket } = data;
-    if (names)
-        res.send({ ticket });
-    else
-        res.send({ _id });
+    const data = await User.findOne({ code: id });
+    const { names, ticket } = data;
+    // Send ticket if exists. Else Send data for registration.
+    const result = names ? { ticket } : data;
+    res.send(result);
 };
 
 // GET | One

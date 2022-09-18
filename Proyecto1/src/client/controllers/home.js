@@ -11,8 +11,10 @@
  */
 
 //* Imports
-import app from "../../app.js";
+// Package Imports
 import fetch from "node-fetch";
+// Project Imports
+import app from "../../app.js";
 
 //* Main
 const home = async (_, res) => {

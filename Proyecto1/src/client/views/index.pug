@@ -29,9 +29,12 @@ block content
                                 span
                                     | Ver mi boleto
                                     i.fa.fa-long-arrow-right.m-l-7(aria-hidden='true')
+
+
+            // TODO: Set "visibility: 'hidden'" as default
             #data-form
                 .wrap-contact100
-                    form.contact100-form.validate-form
+                    form.contact100-form.validate-form(visibility='hidden')
                         span.contact100-form-title
                             | Rifa Yakult 2022!
                         .wrap-input100.validate-input(data-validate='Name is required')
@@ -55,5 +58,5 @@ block content
                                 .contact100-form-bgbtn
                                 button.contact100-form-btn
                                     span
-                                        |Ver mi boleto
+                                        | Ver mi boleto
                                         i.fa.fa-long-arrow-right.m-l-7(aria-hidden='true')
