@@ -15,7 +15,12 @@ import { model, Schema } from "mongoose";
 
 //* Main
 const schema = new Schema({
-    name: { type: String, required: true }
+    code: { type: String, required: true },
+    names: { type: String, required: false },
+    last_names: { type: String, required: false },
+    mail: { type: String, required: false },
+    phone: { type: String, required: false },
+    ticket: { type: String, required: false }
 });
 
 const User = model("User", schema);
