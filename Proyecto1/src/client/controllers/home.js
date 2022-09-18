@@ -12,6 +12,7 @@
 
 //* Imports
 import app from "../../app.js";
+import fetch from "node-fetch";
 
 //* Main
 const home = async (_, res) => {
