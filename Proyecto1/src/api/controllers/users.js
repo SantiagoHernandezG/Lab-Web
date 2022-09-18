@@ -21,6 +21,17 @@ const getAll = async (_, res) => {
 };
 
 // GET | One
+const exists = async (req, res) => {
+    const { id } = req.params;
+    const data = await User.find({ code: id });
+    const { _id, names, ticket } = data;
+    if (names)
+        res.send({ ticket });
+    else
+        res.send({ _id });
+};
+
+// GET | One
 const get = async (req, res) => {
     const { id } = req.params;
     const data = await User.findById(id);
@@ -50,4 +61,4 @@ const put = async (req, res) => {
 };
 
 //* Exports
-export { del, getAll, get, post, put };
+export { del, exists, getAll, get, post, put };

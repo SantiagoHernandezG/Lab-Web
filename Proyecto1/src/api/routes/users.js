@@ -14,7 +14,7 @@
 // Package Imports
 import { Router } from "express";
 // Project Imports
-import { del, get, getAll, post, put } from "../controllers/users.js";
+import { del, exists, get, getAll, post, put } from "../controllers/users.js";
 
 //* Main
 // Router
@@ -25,6 +25,7 @@ router.post("/", post);
 router.delete("/:id", del);
 router.get("/:id", get);
 router.put("/:id", put);
+router.get("/:id/exists", exists);
 
 //* Exports
 export { router };

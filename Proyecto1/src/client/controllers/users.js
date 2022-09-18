@@ -15,7 +15,6 @@ import app from "../../app.js";
 import fetch from "node-fetch";
 
 //* Main
-// GET | All
 const users = async (_, res) => {
     const endpoint = app.get("api");
     const url = new URL("users", endpoint);

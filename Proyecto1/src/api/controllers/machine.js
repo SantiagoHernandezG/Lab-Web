@@ -12,7 +12,7 @@
 
 //* Main
 const data = { title: "Conoce tu Boleto", code: "3476" };
-const machine = (_, res) => res.send(data);
+const machine = (_, res) => {res.send(data);};
 
 //* Exports
 export { machine };

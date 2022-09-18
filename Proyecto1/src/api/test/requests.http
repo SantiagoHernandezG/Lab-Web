@@ -12,8 +12,11 @@ POST http://localhost/api/users HTTP/1.1
 Content-Type: application/json
 
 {
-  "name": "Santi"
+  "code": "1234"
 }
+
+### /api/users:id | HEAD
+HEAD http://localhost/api/users/ HTTP/1.1
 
 ### /api/users:id | GET
 GET http://localhost/api/users/6324f53388db679a3278676d HTTP/1.1
