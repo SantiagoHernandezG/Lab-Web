@@ -10,8 +10,10 @@
  * –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
  */
 
+import { getAll } from "./users.js";
+
 //* Main
-const data = { title: "Admin Dashboard" };
+const data = { title: "Admin Dashboard", users: `${getAll}` };
 const dashboard = async (_, res) => res.send(data);
 
 //* Exports

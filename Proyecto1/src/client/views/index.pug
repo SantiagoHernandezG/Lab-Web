@@ -9,7 +9,7 @@
  * Sep 14, 2022
  * –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 
-extends layoutForm
+extends layout
 
 block content
     main
@@ -29,10 +29,20 @@ block content
                                 span
                                     | Ver mi boleto
                                     i.fa.fa-long-arrow-right.m-l-7(aria-hidden='true')
+                    .container-contact100-form-btn
+                        .wrap-contact100-form-btn
+                            .contact100-form-bgbtn
+                            button.contact100-form-btn
+                                span
+                                    a(href='/dashboard') Ver dashboard
+                                    i.fa.fa-long-arrow-right.m-l-7(aria-hidden='true')
+                    #form-alert.alert.alert-primary(role='alert').alert-hidden
+                        | Ingrese un código válido
 
 
-            // TODO: Set "visibility: 'hidden'" as default
-            #data-form
+
+            // SOLVED TODO: Set "visibility: 'hidden'" as default
+            #data-form.default-hidden
                 .wrap-contact100
                     form.contact100-form.validate-form(visibility='hidden')
                         span.contact100-form-title

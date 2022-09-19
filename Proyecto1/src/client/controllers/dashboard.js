@@ -20,7 +20,7 @@ const dashboard = async (_, res) => {
     const url = new URL(endpoint);
     const data = await fetch(url);
     const json = await data.json();
-    res.render("index", json);
+    res.render("dashboard", json);
 };
 
 //* Exports

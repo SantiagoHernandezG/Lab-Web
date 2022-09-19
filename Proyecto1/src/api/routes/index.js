@@ -16,6 +16,7 @@ import { Router } from "express";
 // Project Imports
 import { home } from "../controllers/home.js";
 import { machine } from "../controllers/machine.js";
+import { dashboard } from "../controllers/dashboard.js";
 import { router as users } from "./users.js";
 
 //* Main
@@ -24,6 +25,7 @@ const router = Router();
 // Routes
 router.get("/", home);
 router.get("/machine", machine);
+router.get("/dashboard", dashboard);
 router.use("/users", users);
 
 //* Exports

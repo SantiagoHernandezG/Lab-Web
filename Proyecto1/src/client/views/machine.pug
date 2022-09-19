@@ -13,10 +13,19 @@ extends layout
 
 block content
     main
-        section#status RIFA YAKULT 2022!
-        section#Slots
-            #slot1.a1
-            #slot2.a1
-            #slot3.a1
-            #slot4.a1
-        section#Gira(onclick=`doSlot(${code})`) VER MI BOLETO!
+        .container-contact100
+            .wrap-contact200
+                section#status.contact100-form-title RIFA YAKULT 2022!
+                section#Slots
+                    #slot1.a1
+                    #slot2.a1
+                    #slot3.a1
+                    #slot4.a1
+                .container-contact100-form-btn
+                        .wrap-contact100-form-btn
+                            .contact100-form-bgbtn
+                            button.contact200-form-btn(onclick=`doSlot(${code})`)
+                                span
+                                    | Ver mi boleto
+                                    i.fa.fa-long-arrow-right.m-l-7(aria-hidden='true')
+    a(href='/') Index

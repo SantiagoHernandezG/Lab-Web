@@ -8,3 +8,25 @@
  *
  * Sep 14, 2022
  * –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+extends layout
+
+block content
+    table.table
+        thead 
+            tr 
+                th Codigo 
+                th Nombres 
+                th Apellidos 
+                th Mail 
+                th Telefono 
+                th Ticket
+        tbody 
+            each user in users  
+                tr 
+                    td=user.code
+                    td=user.names 
+                    td=user.last_names 
+                    td=user.mail 
+                    td=user.phone 
+                    td=user.ticket
+    a(href="/") Home

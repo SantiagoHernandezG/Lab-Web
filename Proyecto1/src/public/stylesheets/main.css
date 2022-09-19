@@ -38,15 +38,18 @@ body, html {
 
 /*---------------------------------------------*/
 a {
-    font-family: Poppins-Regular;
-    font-size: 14px;
-    line-height: 1.7;
-    color: #666666;
+    font-family: Poppins-Medium;
+    font-size: 16px;
+    line-height: 1.2;
+    color: #fff;
     margin: 0px;
     transition: all 0.4s;
     -webkit-transition: all 0.4s;
     -o-transition: all 0.4s;
     -moz-transition: all 0.4s;
+}
+a:visited{
+    color: #fff;
 }
 
 a:focus {
@@ -208,7 +211,20 @@ iframe {
     margin: 0px 35px;
     padding: 42px 55px 45px 55px;
 }
+.wrap-contact200 {
+    width: 830px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 0px 35px;
+    padding: 42px 55px 45px 55px;
+}
 
+
+
+.default-hidden{
+    visibility: hidden;
+}
 
 /*------------------------------------------------------------------
 [ Form ]*/
@@ -367,6 +383,23 @@ textarea.input100 {
     color: #fff;
     line-height: 1.2;
 }
+.contact200-form-btn {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    width: 100%;
+    height: 50px;
+
+    font-family: Poppins-Medium;
+    font-size: 26px;
+    color: #fff;
+    line-height: 1.2;
+}
 
 .wrap-contact100-form-btn:hover .contact100-form-bgbtn {
     left: 0;
@@ -378,8 +411,21 @@ textarea.input100 {
     -moz-transition: all 0.4s;
     transition: all 0.4s;
 }
+.contact200-form-btn i {
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+}
 
 .contact100-form-btn:hover i {
+    -webkit-transform: translateX(10px);
+    -moz-transform: translateX(10px);
+    -ms-transform: translateX(10px);
+    -o-transform: translateX(10px);
+    transform: translateX(10px);
+}
+.contact200-form-btn:hover i {
     -webkit-transform: translateX(10px);
     -moz-transform: translateX(10px);
     -ms-transform: translateX(10px);
@@ -403,6 +449,12 @@ textarea.input100 {
 
 .validate-input {
     position: relative;
+}
+.alert{
+    margin-top: 15px;
+}
+.alert-hidden{
+    display:none;
 }
 
 .alert-validate::before {
@@ -598,4 +650,70 @@ textarea.input100 {
     font-size: 15px;
     color: #333333;
     line-height: 1.2;
+}
+
+/*------------------------------------------------------------------
+[ Slot Machine ]*/
+
+
+section#Slots{
+	border-radius: 15px;
+	background-color: #fff;
+}
+section#Gira{
+	margin-top: 25px;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	border-radius: 10px;
+	text-align: center;
+	background: #a64bf4;
+    background: -webkit-linear-gradient(left, #00dbde, #fc00ff, #00dbde, #fc00ff);
+    background: -o-linear-gradient(left, #00dbde, #fc00ff, #00dbde, #fc00ff);
+    background: -moz-linear-gradient(left, #00dbde, #fc00ff, #00dbde, #fc00ff);
+    background: linear-gradient(left, #00dbde, #fc00ff, #00dbde, #fc00ff);
+    color: #fff;
+    font-family: Poppins-Medium;
+    font-size: 36px;
+}
+section#Gira:hover{
+	background-color: #c1aa91;
+}
+#slot1, #slot2, #slot3, #slot4{
+	display: inline-block;
+	margin-top: 5px;
+	margin-left: 15px;
+	margin-right: 15px;
+	background-size: 150px;
+	width: 150px;
+	height: 150px;
+}
+.a1{
+	background-image: url("/images/tiles/1.png");
+}
+.a2{
+	background-image: url("/images/tiles/2.png");
+}
+.a3{
+	background-image: url("/images/tiles/3.png");
+}
+.a4{
+	background-image: url("/images/tiles/4.png");
+}
+.a5{
+	background-image: url("/images/tiles/5.png");
+}
+.a6{
+	background-image: url("/images/tiles/6.png");
+}
+.a7{
+	background-image: url("/images/tiles/7.png");
+}
+.a8{
+	background-image: url("/images/tiles/8.png");
+}
+.a9{
+	background-image: url("/images/tiles/9.png");
+}
+.a0{
+	background-image: url("/images/tiles/0.png");
 }
