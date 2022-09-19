@@ -41,11 +41,7 @@ El contenido de `package.json`  será:
 ```
 
 ## Base de Datos
-La base de datos del proyecto se encuentra en un cluster online de MongoDB, por lo que no es necesario precargar información, ya hay datos suficientes para las pruebas en la colección que se utiliza en este proyecto. Solo verifique el archivo `.env` se vea de la siguiente manera
-```json
-DB_URI="mongodb+srv://admin:Admin1_@cluster0.gqzzkfm.mongodb.net/?retryWrites=true&w=majority"
-PORT=80
-```
+La base de datos del proyecto se encuentra en un cluster online de MongoDB, por lo que no es necesario precargar información, ya hay datos suficientes para las pruebas en la colección que se utiliza en este proyecto. 
 ## Iniciar el proyecto
 Una vez instalados los módulos necesarios, ejecute el siguiente comando
 ```bash
