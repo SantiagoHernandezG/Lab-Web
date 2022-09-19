@@ -5,6 +5,13 @@ var win = new Audio("/audio/win.mp3");
 var audio = false;
 var info = true;
 
+for (var x of spin){
+	x.volume = 0.5;
+}
+for (var x of coin){
+	x.volume = 0.4;
+}
+
 function doSlot(displayCode){
 	//Separate the displayCode into 4 digits for each of the tiles
 	var digits = displayCode.toString().split('');
@@ -109,14 +116,7 @@ function doSlot(displayCode){
 function toggleAudio(){
 	if (!audio){
 		audio = !audio;
-		for (var x of spin){
-			x.volume = 0.5;
-		}
-		for (var x of coin){
-			x.volume = 0.5;
-		}
-		win.volume = 1.0;
-		lose.volume = 1.0;
+		
 	}else{
 		audio = !audio;
 		for (var x of spin){
