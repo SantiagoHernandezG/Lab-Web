@@ -10,11 +10,18 @@
  * –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
  */
 
-import { getAll } from "./users.js";
+import app from "../../app.js";
+import fetch from "node-fetch";
 
 //* Main
-const data = { title: "Admin Dashboard", users: `${getAll}` };
-const dashboard = async (_, res) => res.send(data);
+const dashboard = async (_, res) => {
+    const endpoint = app.get("api");
+    const url = new URL("users", endpoint);
+    const data = await fetch(url);
+    const users = await data.json();
+    const result = { title: "Admin Dashboard", users };
+    res.send(result);
+};
 
 //* Exports
 export { dashboard };

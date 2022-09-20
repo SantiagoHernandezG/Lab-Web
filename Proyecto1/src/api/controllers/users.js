@@ -17,7 +17,7 @@ import { User } from "../models/user.js";
 // GET | All
 const getAll = async (_, res) => {
     const data = await User.find();
-    res.send(data);
+    res.json(data);
 };
 
 // GET | One
@@ -34,21 +34,21 @@ const exists = async (req, res) => {
 const get = async (req, res) => {
     const { id } = req.params;
     const data = await User.findById(id);
-    res.send(data);
+    res.json(data);
 };
 
 // DELETE | One
 const del = async (req, res) => {
     const { id } = req.params;
     const data = await User.remove({ _id: id });
-    res.send(data);
+    res.json(data);
 };
 
 // POST | One
 const post = async (req, res) => {
     const { body } = req;
     const data = await User(body).save();
-    res.send(data);
+    res.json(data);
 };
 
 // PUT | One
@@ -56,7 +56,7 @@ const put = async (req, res) => {
     const { id } = req.params;
     const [filter, update] = [{ _id: id }, { $set: req.body }];
     const data = await User.updateOne(filter, update);
-    res.send(data);
+    res.json(data);
 };
 
 //* Exports

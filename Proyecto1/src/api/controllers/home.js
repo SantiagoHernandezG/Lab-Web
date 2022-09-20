@@ -11,8 +11,10 @@
  */
 
 //* Main
-const data = { title: "Rifa Yakult" };
-const home = (_, res) => res.send(data);
+const home = (_, res) => {
+    const data = { title: "Rifa Yakult" };
+    res.json(data);
+};
 
 //* Exports
 export { home };

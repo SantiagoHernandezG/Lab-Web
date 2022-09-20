@@ -16,50 +16,27 @@ block content
             span.contact100-form-title
                 | Dashboard
             table.table
-                thead 
-                    tr 
-                        th(scope='col') Codigo 
-                        th(scope='col') Nombres 
-                        th(scope='col') Apellidos 
-                        th(scope='col') Mail 
-                        th(scope='col') Telefono 
+                thead
+                    tr
+                        th(scope='col') Código
+                        th(scope='col') Nombres
+                        th(scope='col') Apellidos
+                        th(scope='col') Mail
+                        th(scope='col') Teléfono
                         th(scope='col') Ticket
-                tbody 
-                    //TODO: Fix getAll from users as param in api dashboard controller
-                    //each user in users  
-                        tr 
+                tbody
+                    each user in users
+                        tr
                             th(scope='row')=user.code
-                            td=user.names 
-                            td=user.last_names 
-                            td=user.mail 
-                            td=user.phone 
+                            td=user.names
+                            td=user.last_names
+                            td=user.mail
+                            td=user.phone
                             td=user.ticket
-                    //TODO: Delete below and uncomment above
-                    tr 
-                        th(scope='row') 1233
-                        td Santi
-                        td Hernandez
-                        td a01027543@tec.mx
-                        td 5536624625
-                        td 1233
-                    tr 
-                        th(scope='row') 1233
-                        td Santi
-                        td Hernandez
-                        td a01027543@tec.mx
-                        td 5536624625
-                        td 1233
-                    tr 
-                        th(scope='row') 1233
-                        td Santi
-                        td Hernandez
-                        td a01027543@tec.mx
-                        td 5536624625
-                        td 1233
             .container-contact100-form-btn
-                                .wrap-contact100-form-btn
-                                    .contact100-form-bgbtn
-                                    button.contact100-form-btn
-                                        span
-                                            a(href='/') Home
-                                            i.fa.fa-long-arrow-right.m-l-7(aria-hidden='true')
+                .wrap-contact100-form-btn
+                    .contact100-form-bgbtn
+                    button.contact100-form-btn
+                        span
+                            a(href='/') Home
+                            i.fa.fa-long-arrow-right.m-l-7(aria-hidden='true')

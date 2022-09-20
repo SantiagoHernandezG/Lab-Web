@@ -17,7 +17,7 @@ import fetch from "node-fetch";
 //* Main
 const dashboard = async (_, res) => {
     const endpoint = app.get("api");
-    const url = new URL(endpoint);
+    const url = new URL("dashboard", endpoint);
     const data = await fetch(url);
     const json = await data.json();
     res.render("dashboard", json);

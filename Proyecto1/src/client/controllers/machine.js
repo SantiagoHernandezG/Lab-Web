@@ -19,8 +19,7 @@ const machine = async (_, res) => {
     const endpoint = app.get("api");
     const url = new URL("machine", endpoint);
     const data = await fetch(url);
-    const options = await data.json();
-    res.render("machine", options);
+    res.render("machine", data);
 };
 
 //* Exports
