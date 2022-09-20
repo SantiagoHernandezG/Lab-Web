@@ -2,13 +2,16 @@
 
 ## Iniciar el proyecto
 
-Crea una nueva carpeta para tu proyecto y dentro de la carpeta ejecuta el siguiente comando en tu terminal.
+Crea una nueva carpeta para tu proyecto y dentro de la carpeta ejecuta el
+siguiente comando en tu terminal.
 
 ```bash
 npm init -i
 ```
 
-Después de ejecutar el comando se va a generar dentro de la carpeta el archivo `package.json` este archivo es el que utiliza `npm` para identificar los paquetes necesarios de tu proyecto.
+Después de ejecutar el comando se va a generar dentro de la carpeta el
+archivo `package.json` este archivo es el que utiliza `npm` para identificar los
+paquetes necesarios de tu proyecto.
 
 El contenido de `package.json`  será:
 
@@ -41,11 +44,24 @@ El contenido de `package.json`  será:
 ```
 
 ## Base de Datos
-La base de datos del proyecto se encuentra en un cluster online de MongoDB, por lo que no es necesario precargar información, ya hay datos suficientes para las pruebas en la colección que se utiliza en este proyecto. 
+
+La base de datos del proyecto se encuentra en un cluster online de MongoDB, por
+lo que no es necesario precargar información, ya hay datos suficientes para las
+pruebas en la colección que se utiliza en este proyecto.
+
 ## Iniciar el proyecto
+
 Una vez instalados los módulos necesarios, ejecute el siguiente comando
+
 ```bash
 npm start
 ```
-El proyecto se inicia por defecto en el puerto `80` por lo que en su buscador deberá ingresar la siguiente dirección http://localhost
 
+El proyecto se inicia por defecto en el puerto `80` por lo que en su buscador
+deberá ingresar la siguiente dirección http://localhost
+
+## Pruebas
+
+Dentro de las carpetas `api` y `client` se encuentra la carpeta `test`. Cada
+una cuenta con un archivo `requests.http` para realizar peticiones HTTP a la API
+y al Cliente. 
